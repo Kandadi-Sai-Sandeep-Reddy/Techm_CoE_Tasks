@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the State bean -->
+    <bean id="state" class="com.sample.State">
+        <property name="name" value="UP" />
+    </bean>
+
+    <!-- Define the Location bean and use autowire by name -->
+    <bean id="city" class="com.sample.City" autowire="byName">
+        <property name="cityName" value="Lucknow" />
+    </bean>
+
+</beans>
